@@ -1,5 +1,3 @@
 FROM node:6-alpine
-RUN apt-get update && apt-get install -y \
-        chromium \
-        xvfb \
-    && npm install -g npm
+RUN apk add --no-cache chromium && apk add --no-cache xvfb
+RUN npm install -g npm
